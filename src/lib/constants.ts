@@ -1,3 +1,4 @@
+
 import { Users, Mic, Cpu, Zap, Award, Coffee, Rocket, Code, CalendarDays, Clock, MapPin, BrainCircuit, Presentation } from 'lucide-react';
 
 export const galleryImages = [
@@ -51,7 +52,7 @@ export const eventSchedule = {
     },
   ],
   generalInfo: {
-    location: "University Main Auditorium, MTU, Ota",
+    location: "CBAS BIG LECTURE HALL",
     mainIcon: MapPin,
   }
 };
