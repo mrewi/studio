@@ -56,20 +56,20 @@ export function Footer() {
           <h3 className="font-headline text-lg font-semibold mb-4 text-primary">Contact Us</h3>
           <div className="space-y-3">
             <GlowingIcon icon={Mail} href="mailto:nacosmtu@mtu.edu.ng" label="nacosmtu@mtu.edu.ng" />
-            <GlowingIcon icon={MapPin} label="MTU, Ota, Ogun State" />
+            <GlowingIcon icon={MapPin} label="Mountain Top University, Prayer City, Ogun State" />
           </div>
         </div>
 
         <div className="flex flex-col items-center md:items-start">
           <h3 className="font-headline text-lg font-semibold mb-4 text-primary">Event Details</h3>
           <div className="space-y-3">
-            <GlowingIcon icon={LinkIcon} href="https://mtu.nacostechfair.ng" label="mtu.nacostechfair.ng" />
+            <GlowingIcon icon={LinkIcon} href="https://mtunacostechfair.vercel.app" label="mtunacostechfair.com" />
             <p className="font-bold text-accent text-lg animate-glow">#MTUNacosTechFair2025</p>
           </div>
         </div>
       </div>
       <div className="mt-12 text-center text-xs text-muted-foreground/80">
-        Designed with <span className="text-red-500 animate-pulse">❤</span> by AI & Humans for NACOS MTU
+        Designed with <span className="text-red-500 animate-pulse">❤</span> by EWI DAMILOLA
       </div>
     </footer>
   );

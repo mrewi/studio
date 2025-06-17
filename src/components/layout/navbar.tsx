@@ -2,7 +2,7 @@
 "use client";
 
 import Link from 'next/link';
-import { Users, Ticket, CalendarDays, HomeIcon, Menu } from 'lucide-react';
+import { Users, Ticket, CalendarDays, HomeIcon,ImageIcon, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
@@ -12,7 +12,7 @@ import Image from 'next/image';
 const navItems = [
   { href: '#home', label: 'Home', icon: HomeIcon },
   { href: '#about', label: 'About', icon: Users },
-  // { href: '#gallery', label: 'Gallery', icon: ImageIcon },
+  { href: '#gallery', label: 'Gallery', icon: ImageIcon },
   { href: '#ticket', label: 'Get Ticket', icon: Ticket },
   { href: '#schedule', label: 'Schedule', icon: CalendarDays },
 ];
