@@ -2,15 +2,15 @@
 import { Users, Mic, Cpu, Award, Coffee, Rocket, Code, CalendarDays, Clock, MapPin, BrainCircuit, Presentation, Clipboard, Lightbulb, AppWindow, Camera, Trophy, PartyPopper, Briefcase, FileText, Search, Laptop, Gamepad2, Smartphone, Brain, Dice5, Keyboard, Mic2, Target } from 'lucide-react';
 
 export const galleryImages = [
-  { id: 1, src: "/images/gallery/nacos1.jpg", alt: "Tech Fair Opening Ceremony", hint: "conference opening" },
-  { id: 2, src: "/images/gallery/nacos2.jpg", alt: "Students in a workshop", hint: "student workshop" },
-  { id: 3, src: "/images/gallery/nacos3.jpg", alt: "Speaker presenting on stage", hint: "speaker stage" },
-  { id: 4, src: "/images/gallery/nacos4.jpg", alt: "Attendees networking", hint: "people networking" },
-  { id: 5, src: "/images/gallery/nacos5.jpg", alt: "Close-up of a tech project", hint: "tech project" },
-  { id: 6, src: "/images/gallery/nacos6.jpg", alt: "Award presentation moment", hint: "award presentation" },
-  { id: 7, src: "/images/gallery/nacos7.jpg", alt: "Group photo of participants", hint: "team photo" },
-  { id: 8, src: "/images/gallery/nacos8.jpg", alt: "Participant using VR headset", hint: "virtual reality" },
-  { id: 9, src: "/images/gallery/nacos9.jpg", alt: "Networking during a break", hint: "networking break" },
+  { id: 1, src: "https://ibb.co/HptHHnxV", alt: "Tech Fair Opening Ceremony", hint: "conference opening" },
+  { id: 2, src: "/public/images/nacos2.jpg", alt: "Students in a workshop", hint: "student workshop" },
+  { id: 3, src: "/public/images/nacos3.jpg", alt: "Speaker presenting on stage", hint: "speaker stage" },
+  { id: 4, src: "/public/images/nacos4.jpg", alt: "Attendees networking", hint: "people networking" },
+  { id: 5, src: "/public/images/nacos5.jpg", alt: "Close-up of a tech project", hint: "tech project" },
+  { id: 6, src: "/public/images/nacos6.jpg", alt: "Award presentation moment", hint: "award presentation" },
+  { id: 7, src: "/public/images/nacos7.jpg", alt: "Group photo of participants", hint: "team photo" },
+  { id: 8, src: "/public/images/nacos8.jpg", alt: "Participant using VR headset", hint: "virtual reality" },
+  { id: 9, src: "/public/images/nacos9.jpg", alt: "Networking during a break", hint: "networking break" },
 ];
 
 export const eventSchedule = {
