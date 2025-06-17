@@ -1,3 +1,4 @@
+
 import { CodeXml, Briefcase, Mail, MapPin, Link as LinkIcon } from 'lucide-react';
 import Link from 'next/link';
 
@@ -54,7 +55,7 @@ export function Footer() {
         <div className="flex flex-col items-center md:items-start">
           <h3 className="font-headline text-lg font-semibold mb-4 text-primary">Contact Us</h3>
           <div className="space-y-3">
-            <GlowingIcon icon={Mail} href="mailto:info@nacostechfair.mtu" label="info@nacostechfair.mtu" />
+            <GlowingIcon icon={Mail} href="mailto:nacosmtu@mtu.edu.ng" label="nacosmtu@mtu.edu.ng" />
             <GlowingIcon icon={MapPin} label="MTU, Ota, Ogun State" />
           </div>
         </div>
