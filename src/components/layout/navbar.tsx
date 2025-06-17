@@ -40,7 +40,7 @@ export function Navbar() {
           className="flex items-center gap-2"
           aria-label="MTU NACOS Tech Fair Home"
         >
-          <Image src="https://i.ibb.co/yBWjq3nG/logo.png" alt="MTU NACOS Tech Fair Logo" width={32} height={32} className="h-8 w-8" />
+          <Image src="https://i.ibb.co/DH0LS7Jv/logo.png" alt="MTU NACOS Tech Fair Logo" width={32} height={32} className="h-8 w-8" />
           <span className="font-headline text-xl font-bold uppercase text-primary">
             MTU <span className="text-accent">NACOS</span>
           </span>
