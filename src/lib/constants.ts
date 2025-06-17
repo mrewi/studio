@@ -12,6 +12,7 @@ export const galleryImages = [
   { id: 8, src: "/lib/image/nacos8.jpg", alt: "Participant using VR headset", hint: "virtual reality" },
   { id: 9, src: "/lib/image/nacos9.jpg", alt: "Networking during a break", hint: "networking break" },
 ];
+
 export const eventSchedule = {
   objectives: [
     "To showcase technological innovations from MTU students and local tech communities.",
@@ -129,3 +130,4 @@ interface EventScheduleData {
   };
 }
 export const typedEventSchedule: EventScheduleData = eventSchedule;
+
