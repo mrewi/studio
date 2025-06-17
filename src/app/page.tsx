@@ -4,7 +4,7 @@ import { HomeSection } from '@/components/sections/home-section';
 import { AboutSection } from '@/components/sections/about-section';
 import { GallerySection } from '@/components/sections/gallery-section';
 import { TicketSection } from '@/components/sections/ticket-section';
-import { EventScheduleSection } from '@/components/sections/event-schedule';
+import { EventSchedule } from '@/components/sections/event-schedule';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
         <AboutSection />
         <GallerySection />
         <TicketSection />
-        <EventScheduleSection />
+        <EventSchedule />
       </main>
       <Footer />
     </div>
