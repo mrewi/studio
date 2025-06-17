@@ -1,5 +1,5 @@
 
-import { Users, Mic, Cpu, Target, Award, Coffee, Rocket, Code, CalendarDays, Clock, MapPin, BrainCircuit, Presentation, Clipboard, Lightbulb, AppWindow, Camera, Trophy, PartyPopper, Briefcase } from 'lucide-react';
+import { Users, Mic, Cpu, Target, Award, Coffee, Rocket, Code, CalendarDays, Clock, MapPin, BrainCircuit, Presentation, Clipboard, Lightbulb, AppWindow, Camera, Trophy, PartyPopper, Briefcase, FileText, Search, Laptop } from 'lucide-react';
 
 export const galleryImages = [
   { id: 1, src: "https://placehold.co/600x400.png", alt: "Tech Fair Opening Ceremony", hint: "conference opening" },
@@ -18,7 +18,8 @@ export const eventSchedule = {
     "To provide a platform for knowledge sharing and networking among tech enthusiasts, students, and professionals.",
     "To inspire students towards careers in technology and entrepreneurship.",
     "To foster collaboration between academia and industry in the tech sector.",
-    "To give students real-world exposure and connect them with industry professionals."
+    "To give students real-world exposure and connect them with industry professionals.",
+    "To equip students for post-campus life with mentorship and career guidance."
   ],
   days: [
     {
@@ -27,51 +28,62 @@ export const eventSchedule = {
       icon: Target,
       themeColor: "text-primary",
       activities: [
-        { time: "09:00 AM - 09:30 AM", title: "Registration", icon: Clipboard, description: "Branded check-in desks, name tags, event guides, sponsor souvenirs. Sponsor booths active." },
+        { time: "09:00 AM - 09:30 AM", title: "Registration", icon: Clipboard, description: "Branded check-in desks, name tags, event guides, sponsor souvenirs. Sponsor booths (e.g., PalmPay) active. Venue: CBAS Car Park to CHMS Car Park." },
         { 
           time: "09:30 AM - 11:30 AM", 
           title: "Opening Ceremony", 
           icon: Mic, 
-          description: "Anthems, welcome address (NACOS MTU President), Keynote Speeches by Abah Emmanuel and the Director of Innovation (Nacos National), introduction of exhibitors and pitch judges.",
+          description: "Anthems, welcome address (NACOS MTU President), Citation for Keynote Speaker I (VP), Keynote I: Abah Emmanuel, Citation for Keynote Speaker II (VP), Keynote II: Director Of Innovation and Research Nacos National, introduction of exhibitors and pitch judges. Venue: CBAS Car Park to CHMS Car Park.",
           speaker: "Abah Emmanuel (Keynote I) & Director Of Innovation, Nacos National (Keynote II)"
         },
-        { time: "11:30 AM - 12:00 PM", title: "Innovation Pitch Competition", icon: Lightbulb, description: "5 student teams pitch original ideas (5 mins pitch + 3 mins Q&A). Judges: Faculty, alumni, industry reps. Prize: Best Pitch Award (sponsored)." },
-        { time: "12:00 PM - 01:00 PM", title: "Tech & Startup Exhibitions", icon: AppWindow, description: "10+ booths: Student apps, AI tools, UI/UX, games, hardware. Fintech & blockchain demos. Sponsor/startup booths. Engagement: raffles, app trials, quick games, giveaways." },
-        { time: "01:00 PM - 01:30 PM", title: "Networking Segment", icon: Users, description: "Designated networking zone. Guided speed networking, alumni meetups." },
-        { time: "01:30 PM - 02:00 PM", title: "Closing & Group Photos", icon: Camera, description: "Vote of thanks, award recognition. Group photos, final remarks." },
+        { time: "11:30 AM - 12:00 PM", title: "Innovation Pitch Competition", icon: Lightbulb, description: "5 student teams pitch original ideas (5 mins pitch + 3 mins Q&A). Judges: Faculty, alumni, industry reps. Prize: Best Pitch Award (sponsored). Venue: CBAS Car Park to CHMS Car Park." },
+        { time: "12:00 PM - 01:00 PM", title: "Tech & Startup Exhibitions", icon: AppWindow, description: "10+ booths: Student apps, AI tools, UI/UX, games, hardware. Fintech & blockchain demos. Sponsor/startup booths. Engagement: raffles, app trials, quick games, giveaways. Venue: CBAS Car Park to CHMS Car Park." },
+        { time: "01:00 PM - 01:30 PM", title: "Networking Segment", icon: Users, description: "Designated networking zone. Guided speed networking, alumni meetups. Venue: CBAS Car Park to CHMS Car Park." },
+        { time: "01:30 PM - 02:00 PM", title: "Closing & Group Photos", icon: Camera, description: "Vote of thanks, award recognition. Group photos, final remarks. Venue: CBAS Car Park to CHMS Car Park." },
       ],
     },
     {
-      day: "Day 2: Code & Creation",
+      day: "Day 2: Tech Meet & Awards - From Campus to Career",
       date: "June 19, 2025",
-      icon: Cpu,
+      icon: Award, // Changed icon to Award
       themeColor: "text-accent",
       activities: [
-        { time: "09:00 AM", title: "Morning Coffee & Expo Opens", icon: Coffee, description: "Explore tech booths and demos." },
-        { time: "10:00 AM", title: "Keynote: Cybersecurity in the Modern Age", icon: Mic, speaker: "Dr. Ifeoma E.", description: "Insights on protecting digital assets." },
-        { time: "11:30 AM", title: "Workshop: Building Scalable Cloud Apps", icon: Rocket, description: "Practical guide to cloud architecture." },
-        { time: "01:00 PM", title: "Lunch & Startup Pitch Session", icon: Users, description: "Lunch followed by exciting startup pitches." },
-        { time: "02:30 PM", title: "Student Project Showcase Part 2", icon: Presentation, description: "More innovative projects from MTU's finest." },
-        { time: "04:00 PM", title: "Awards Ceremony & Closing Remarks", icon: Award, description: "Recognizing top projects and concluding the fair." },
-        { time: "05:00 PM", title: "Networking Reception", icon: Users, description: "Final opportunity to connect." },
+        { 
+          time: "10:00 AM - 12:00 PM", 
+          title: "Alumni & Professional Panel: Navigating the Tech Industry", 
+          icon: Presentation, 
+          description: "Topic: “Navigating the Tech Industry as a Young Nigerian Graduate”. Moderator-led Q&A with Alumni + tech professionals, real-world tips. Venue: CBAS BIG LT." 
+        },
+        { 
+          time: "01:00 PM - 03:00 PM", 
+          title: "Career & Mentorship Hub", 
+          icon: Briefcase, 
+          description: "Sessions on: CV writing & LinkedIn optimization, Interview techniques, job search strategies, Freelancing, internships, remote jobs, Personal branding & online visibility. Venue: CBAS BIG LT." 
+        },
+        { 
+          time: "03:30 PM - 05:00 PM", 
+          title: "Awards & Recognition Ceremony", 
+          icon: Trophy, 
+          description: "Celebrating excellence: Best Innovator of the Year, Tech Influencer Award, Best in Academics (Computer Science & Mathematics), Best Project (from Day 1 Pitch), Most Supportive Lecturer, Industry Partner Appreciation (Aquatic Waters), Alumni Contribution Award. Certificate & Souvenir Presentations. Venue: CBAS BIG LT." 
+        },
       ],
     },
     {
-      day: "Day 3: Future Forward & Awards",
+      day: "Day 3: Future Forward & Workshops", // Updated title to be more specific
       date: "June 20, 2025",
       icon: Rocket, 
-      themeColor: "text-secondary",
+      themeColor: "text-secondary", // Using a distinct color, e.g., a lighter purple or other theme color
       activities: [
-        { time: "09:00 AM", title: "Advanced Workshops (e.g., Machine Learning, IoT)", icon: BrainCircuit, description: "Deep dive into specialized tech fields." },
-        { time: "11:00 AM", title: "Industry Connect: Career Fair & Mentorship", icon: Briefcase, description: "Connect with companies and find mentors." },
-        { time: "01:00 PM", title: "Lunch & Final Networking", icon: Users, description: "Last chance for structured networking over lunch." },
-        { time: "02:30 PM", title: "Grand Finale: Hackathon Winners & Closing Gala", icon: Trophy, description: "Announcement of hackathon winners and event celebration." },
-        { time: "04:30 PM", title: "Vote of Thanks & Event End", icon: PartyPopper, description: "Concluding the tech fair with acknowledgements." },
+        { time: "09:00 AM - 11:00 AM", title: "Advanced Workshop: AI & Machine Learning", icon: BrainCircuit, description: "Deep dive into AI concepts and practical applications. Led by industry experts. Venue: CBAS BIG LT / Relevant Lab." },
+        { time: "11:30 AM - 01:00 PM", title: "Advanced Workshop: Cloud & DevOps", icon: Cpu, description: "Exploring cloud infrastructure, CI/CD pipelines, and scalable solutions. Venue: CBAS BIG LT / Relevant Lab." },
+        { time: "01:00 PM - 02:00 PM", title: "Lunch & Final Networking", icon: Coffee, description: "Last chance for structured networking over lunch." },
+        { time: "02:00 PM - 03:30 PM", title: "Closing Keynote & Vision for the Future", icon: Mic, speaker: "Distinguished Tech Leader", description: "Inspiring talk on future tech trends and opportunities." },
+        { time: "03:30 PM - 04:00 PM", title: "Vote of Thanks & Event End", icon: PartyPopper, description: "Concluding the tech fair with acknowledgements and a look ahead." },
       ],
     },
   ],
   generalInfo: {
-    location: "CBAS BIG LECTURE HALL",
+    location: "MTU Campus: CBAS Car Park to CHMS Car Park & CBAS BIG LT", // Updated to reflect multiple venues
     mainIcon: MapPin,
   }
 };
@@ -102,3 +114,4 @@ interface EventScheduleData {
   };
 }
 export const typedEventSchedule: EventScheduleData = eventSchedule;
+
