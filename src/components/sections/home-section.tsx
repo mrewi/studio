@@ -4,10 +4,10 @@ import { ArrowRight, Cpu } from 'lucide-react';
 import Link from 'next/link';
 
 export function HomeSection() {
-  // Set a future date for the countdown, e.g., 30 days from now
-  // This should be dynamically set or come from a config in a real app
+  // Set eventDate to 9 AM tomorrow
   const eventDate = new Date();
-  eventDate.setDate(eventDate.getDate() + 30); 
+  eventDate.setDate(eventDate.getDate() + 1); // Move to tomorrow
+  eventDate.setHours(9, 0, 0, 0); // Set time to 9:00:00 AM
 
   return (
     <section id="home" className="relative py-20 md:py-32 min-h-[calc(100vh-4rem)] flex items-center justify-center overflow-hidden">
@@ -44,7 +44,7 @@ export function HomeSection() {
         </div>
 
         <div className="mt-12 md:mt-16 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-          <Link href="#ticket" passHref>
+          <Link href="#ticket">
             <Button size="lg" className="group text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-glow-primary transition-all duration-300 ease-out transform hover:scale-105">
               Get Your Free Ticket
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
