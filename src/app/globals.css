@@ -2,79 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --background-rgb: 228, 242, 220; /* E4F2DC */
+    --foreground-rgb: 38, 38, 38; /* Dark gray for text */
+
+    --background: 96 43% 90%; /* Light desaturated green #E4F2DC */
+    --foreground: 240 10% 15%; /* Dark gray for text */
+    
+    --card: 96 43% 92%; /* Slightly lighter than background */
+    --card-foreground: 240 10% 15%;
+
+    --popover: 96 43% 92%;
+    --popover-foreground: 240 10% 15%;
+
+    --primary: 90 48% 57%; /* MTU Green #76B041 */
+    --primary-foreground: 240 10% 10%; /* Dark text for on-primary elements */
+    --primary-hsl: 90, 48%, 57%;
+
+
+    --secondary: 261 38% 70%; /* Lighter NACOS Purple */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 96 43% 85%;
+    --muted-foreground: 240 10% 35%;
+
+    --accent: 261 38% 61%; /* NACOS Purple #8E6CCB */
+    --accent-foreground: 0 0% 100%; /* White text for on-accent elements */
+    --accent-hsl: 261, 38%, 61%;
+
+    --destructive: 0 72% 51%; 
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 90 30% 70%; 
+    --input: 90 30% 75%;
+    --ring: 90 48% 57%; /* MTU Green for focus rings */
+
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Sidebar vars - kept for potential future use or if shadcn components rely on them, themed consistently */
+    --sidebar-background: 96 43% 88%;
+    --sidebar-foreground: 240 10% 15%;
+    --sidebar-primary: 90 48% 57%;
+    --sidebar-primary-foreground: 240 10% 10%;
+    --sidebar-accent: 261 38% 61%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 90 30% 70%;
+    --sidebar-ring: 90 48% 57%;
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background-rgb: 30, 32, 42;
+    --foreground-rgb: 228, 242, 220;
+
+    --background: 220 13% 12%; /* Dark blueish grey */
+    --foreground: 96 43% 90%; /* Light desaturated green text */
+
+    --card: 220 13% 15%;
+    --card-foreground: 96 43% 90%;
+
+    --popover: 220 13% 15%;
+    --popover-foreground: 96 43% 90%;
+
+    --primary: 90 48% 57%; /* MTU Green #76B041 */
+    --primary-foreground: 240 10% 10%; /* Dark text on MTU Green */
+
+    --secondary: 261 38% 50%; /* Darker NACOS Purple */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 220 13% 20%;
+    --muted-foreground: 96 43% 70%;
+
+    --accent: 261 38% 61%; /* NACOS Purple #8E6CCB */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 40%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 261 20% 40%;
+    --input: 261 20% 35%;
+    --ring: 261 38% 61%; /* NACOS Purple for focus rings in dark mode */
+
+    /* Sidebar vars - dark theme */
+    --sidebar-background: 220 13% 10%;
+    --sidebar-foreground: 96 43% 90%;
+    --sidebar-primary: 90 48% 57%;
+    --sidebar-primary-foreground: 240 10% 10%;
+    --sidebar-accent: 261 38% 61%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 261 20% 40%;
+    --sidebar-ring: 261 38% 61%;
   }
 }
 
@@ -84,5 +106,38 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    /* Subtle circuit board pattern */
+    background-image:
+      linear-gradient(hsla(var(--primary-hsl), 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(var(--primary-hsl), 0.03) 1px, transparent 1px);
+    background-size: 2rem 2rem; /* 32px */
+  }
+
+  .dark body {
+    background-image:
+      linear-gradient(hsla(var(--primary-hsl), 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(var(--primary-hsl), 0.05) 1px, transparent 1px);
+    background-size: 2rem 2rem;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline uppercase font-bold;
+  }
+}
+
+@layer utilities {
+  .text-glow-accent {
+    color: hsl(var(--accent));
+    text-shadow: 0 0 5px hsla(var(--accent-hsl), 0.7), 0 0 10px hsla(var(--accent-hsl), 0.5);
+  }
+  .text-glow-primary {
+    color: hsl(var(--primary));
+    text-shadow: 0 0 5px hsla(var(--primary-hsl), 0.7), 0 0 10px hsla(var(--primary-hsl), 0.5);
+  }
+  .shadow-glow-accent {
+    box-shadow: 0 0 15px 2px hsla(var(--accent-hsl), 0.5), 0 0 25px 5px hsla(var(--accent-hsl), 0.3);
+  }
+   .shadow-glow-primary {
+    box-shadow: 0 0 15px 2px hsla(var(--primary-hsl), 0.5), 0 0 25px 5px hsla(var(--primary-hsl), 0.3);
   }
 }
