@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: 'MTU NACOS Tech Fair',
-  description: 'Join us for the MTU NACOS Tech Fair - an expo of innovation and creativity.',
+  description: 'Join us for the MTU NACOS Tech Fair',
 };
 
 export default function RootLayout({
