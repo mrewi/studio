@@ -3,7 +3,7 @@ import { typedEventSchedule } from '@/lib/constants';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Briefcase, CheckCircle, MapPin } from 'lucide-react';
+import { Briefcase, CheckCircle } from 'lucide-react';
 
 
 export function EventSchedule() {
@@ -55,7 +55,7 @@ export function EventSchedule() {
               <TabsTrigger 
                 key={dayData.dayName} 
                 value={`day-${dayData.dayName.replace(/\s+/g, '-').toLowerCase()}`}
-                className="py-3 px-4 text-sm sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg group border border-border hover:bg-muted/50 data-[state=active]:border-primary rounded-md"
+                className="flex items-center py-2 px-3 text-xs sm:py-3 sm:px-4 sm:text-sm data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg group border border-border hover:bg-muted/50 data-[state=active]:border-primary rounded-md transition-all"
               >
                 <dayData.icon className={`w-5 h-5 mr-2 ${dayData.themeColor} group-data-[state=active]:text-primary-foreground transition-colors`} />
                 {dayData.dayName} - <span className="ml-1 text-xs opacity-80">{dayData.date}</span>
@@ -84,6 +84,14 @@ export function EventSchedule() {
                       <p className="text-muted-foreground mb-1">{activity.description}</p>
                       {activity.speaker && (
                         <p className="text-sm text-primary font-semibold">Speaker(s): {activity.speaker}</p>
+                      )}
+                       {activity.speakers && activity.speakers.length > 0 && (
+                        <div>
+                          <p className="text-sm text-primary font-semibold mt-2">Speakers/Panelists:</p>
+                          <ul className="list-disc list-inside pl-4 text-sm text-muted-foreground">
+                            {activity.speakers.map(s => <li key={s.name}>{s.name} {s.role && `(${s.role})`}</li>)}
+                          </ul>
+                        </div>
                       )}
                     </AccordionContent>
                   </AccordionItem>
