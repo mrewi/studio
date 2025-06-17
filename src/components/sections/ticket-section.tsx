@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -9,19 +10,21 @@ import { Input } from '@/components/ui/input';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { TicketDisplay } from '@/components/common/ticket-display';
-import { Ticket as TicketIcon, User, Mail, CheckCircle } from 'lucide-react';
+import { Ticket as TicketIcon, User, FileText, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ticketFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }).max(50),
-  email: z.string().email({ message: "Please enter a valid email address." }),
+  matricNumber: z.string()
+    .length(11, { message: "Matric number must be exactly 11 digits." })
+    .regex(/^\d{11}$/, { message: "Matric number must only contain digits." }),
 });
 
 type TicketFormValues = z.infer<typeof ticketFormSchema>;
 
 interface GeneratedTicketData {
   name: string;
-  email: string;
+  matricNumber: string;
   ticketId: string;
 }
 
@@ -33,13 +36,11 @@ export function TicketSection() {
     resolver: zodResolver(ticketFormSchema),
     defaultValues: {
       name: '',
-      email: '',
+      matricNumber: '',
     },
   });
 
   async function onSubmit(data: TicketFormValues) {
-    // In a real app, you'd send this to a backend to register the user and get a unique ticket ID.
-    // For this demo, we'll generate a pseudo-random ticket ID.
     const ticketId = `MTUTF-${Math.random().toString(36).substr(2, 9).toUpperCase()}`;
     setGeneratedTicket({ ...data, ticketId });
     
@@ -49,7 +50,6 @@ export function TicketSection() {
       action: <CheckCircle className="text-green-500" />,
     });
 
-    // Scroll to ticket display
     setTimeout(() => {
       const ticketElement = document.getElementById('ticketDisplay');
       if (ticketElement) {
@@ -98,14 +98,14 @@ export function TicketSection() {
                   />
                   <FormField
                     control={form.control}
-                    name="email"
+                    name="matricNumber"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-foreground/80">Email Address</FormLabel>
+                        <FormLabel className="text-foreground/80">Matric Number</FormLabel>
                         <FormControl>
                            <div className="relative">
-                            <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-                            <Input type="email" placeholder="e.g. ada@example.com" {...field} className="pl-10" />
+                            <FileText className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                            <Input type="text" placeholder="e.g. 20210123456" {...field} className="pl-10" />
                           </div>
                         </FormControl>
                         <FormMessage />

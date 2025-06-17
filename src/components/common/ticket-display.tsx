@@ -1,3 +1,4 @@
+
 "use client";
 
 import QRCode from 'qrcode.react';
@@ -9,7 +10,7 @@ import html2canvas from 'html2canvas';
 
 interface TicketData {
   name: string;
-  email: string;
+  matricNumber: string;
   ticketId: string;
 }
 
@@ -23,14 +24,15 @@ export function TicketDisplay({ ticketData }: TicketDisplayProps) {
   const qrValue = JSON.stringify({
     ticketId: ticketData.ticketId,
     name: ticketData.name,
+    matricNumber: ticketData.matricNumber,
     event: "MTU NACOS Tech Fair 2025",
   });
 
   const handleDownload = async () => {
     if (ticketRef.current) {
       const canvas = await html2canvas(ticketRef.current, {
-        scale: 2, // Increase scale for better quality
-        backgroundColor: null, // Use element's background
+        scale: 2, 
+        backgroundColor: null, 
       });
       const image = canvas.toDataURL('image/png');
       const link = document.createElement('a');
@@ -47,18 +49,14 @@ export function TicketDisplay({ ticketData }: TicketDisplayProps) {
       const printWindow = window.open('', '_blank');
       if (printWindow) {
         printWindow.document.write('<html><head><title>Print Ticket</title>');
-        // You might want to include some basic styling for printing
         printWindow.document.write('<style> body { font-family: sans-serif; margin: 20px; } .ticket-card { border: 1px solid #ccc; padding: 20px; max-width: 400px; margin: auto; text-align: center; } .qr-code { margin: 20px auto; display: block; } </style>');
         printWindow.document.write('</head><body>');
         printWindow.document.write(ticketRef.current.innerHTML);
         printWindow.document.write('</body></html>');
         printWindow.document.close();
         printWindow.focus();
-        // Delay print to allow content to load
         setTimeout(() => {
           printWindow.print();
-          // Optional: close window after print dialog
-          // printWindow.close(); 
         }, 500);
       }
     }
@@ -85,8 +83,8 @@ export function TicketDisplay({ ticketData }: TicketDisplayProps) {
             <p className="text-lg font-semibold text-foreground">{ticketData.name}</p>
           </div>
           <div>
-            <p className="text-sm text-muted-foreground">Email:</p>
-            <p className="text-lg font-semibold text-foreground">{ticketData.email}</p>
+            <p className="text-sm text-muted-foreground">Matric Number:</p>
+            <p className="text-lg font-semibold text-foreground">{ticketData.matricNumber}</p>
           </div>
           <div>
             <p className="text-sm text-muted-foreground">Ticket ID:</p>
