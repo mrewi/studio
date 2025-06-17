@@ -1,3 +1,4 @@
+
 import { eventSchedule } from '@/lib/constants';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -5,11 +6,17 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Briefcase, CalendarDays, CheckCircle, MapPin } from 'lucide-react';
 
-const GlowingIcon = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
-  <Icon className={`w-6 h-6 text-glow-accent ${className}`} />
-);
+// GlowingIcon is not used here, can be removed if not needed elsewhere in this file.
+// const GlowingIcon = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
+//   <Icon className={`w-6 h-6 text-glow-accent ${className}`} />
+// );
 
 export function EventSchedule() {
+  // Default to the first day in the schedule
+  const defaultTabValue = eventSchedule.days.length > 0 
+    ? `day-${eventSchedule.days[0].day.replace(/\s+/g, '-').toLowerCase()}` 
+    : 'day-1';
+
   return (
     <section id="schedule" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +25,7 @@ export function EventSchedule() {
             Event <span className="text-primary">Schedule</span>
           </h2>
           <p className="mt-4 text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
-            Plan your participation. Explore sessions, workshops, and networking opportunities.
+            Plan your participation. Explore sessions, workshops, and networking opportunities across our 3-day event.
           </p>
         </div>
 
@@ -48,16 +55,16 @@ export function EventSchedule() {
         </div>
 
 
-        <Tabs defaultValue={`day-${eventSchedule.days[0].day.replace(/\s+/g, '-').toLowerCase()}`} className="w-full">
+        <Tabs defaultValue={defaultTabValue} className="w-full">
           <ScrollArea className="pb-2.5">
-            <TabsList className="grid w-full grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
+            <TabsList className={`grid w-full grid-cols-1 sm:grid-cols-${eventSchedule.days.length > 1 ? eventSchedule.days.length : 1} gap-2 mb-8`}>
               {eventSchedule.days.map((dayData) => (
                 <TabsTrigger 
                   key={dayData.day} 
                   value={`day-${dayData.day.replace(/\s+/g, '-').toLowerCase()}`}
-                  className="py-3 text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg"
+                  className="py-3 text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg group" // Added group for hover states on icon
                 >
-                  <dayData.icon className={`w-5 h-5 mr-2 ${dayData.themeColor} group-data-[state=active]:text-primary-foreground`} />
+                  <dayData.icon className={`w-5 h-5 mr-2 ${dayData.themeColor} group-data-[state=active]:text-primary-foreground transition-colors`} />
                   {dayData.day} - <span className="ml-1 text-xs opacity-80">{dayData.date}</span>
                 </TabsTrigger>
               ))}
@@ -65,14 +72,14 @@ export function EventSchedule() {
             <ScrollBar orientation="horizontal" />
           </ScrollArea>
 
-          {eventSchedule.days.map((dayData) => (
+          {eventSchedule.days.map((dayData, dayIndex) => (
             <TabsContent key={dayData.day} value={`day-${dayData.day.replace(/\s+/g, '-').toLowerCase()}`}>
-              <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
-                {dayData.activities.map((activity, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-border/50">
-                    <AccordionTrigger className="hover:bg-muted/50 px-4 py-4 text-left text-base md:text-lg rounded-t-md">
+              <Accordion type="single" collapsible className="w-full" defaultValue={`item-${dayIndex}-0`}>
+                {dayData.activities.map((activity, activityIndex) => (
+                  <AccordionItem key={activityIndex} value={`item-${dayIndex}-${activityIndex}`} className="border-b border-border/50">
+                    <AccordionTrigger className="hover:bg-muted/50 px-4 py-4 text-left text-base md:text-lg rounded-t-md group">
                       <div className="flex items-center gap-3 w-full">
-                        <activity.icon className={`w-6 h-6 ${dayData.themeColor} flex-shrink-0`} />
+                        <activity.icon className={`w-6 h-6 ${dayData.themeColor} flex-shrink-0 transition-colors group-hover:text-primary`} />
                         <div className="flex-grow">
                           <span className="font-semibold text-foreground">{activity.title}</span>
                           <span className={`block text-sm ${dayData.themeColor} font-medium`}>{activity.time}</span>
@@ -82,7 +89,7 @@ export function EventSchedule() {
                     <AccordionContent className="px-4 pb-4 pt-2 bg-muted/30 rounded-b-md">
                       <p className="text-muted-foreground mb-1">{activity.description}</p>
                       {activity.speaker && (
-                        <p className="text-sm text-primary font-semibold">Speaker: {activity.speaker}</p>
+                        <p className="text-sm text-primary font-semibold">Speaker(s): {activity.speaker}</p>
                       )}
                     </AccordionContent>
                   </AccordionItem>
@@ -95,3 +102,4 @@ export function EventSchedule() {
     </section>
   );
 }
+
