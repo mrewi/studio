@@ -1,20 +1,14 @@
 
-import { eventSchedule } from '@/lib/constants';
+import { typedEventSchedule } from '@/lib/constants';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
-import { Briefcase, CalendarDays, CheckCircle, MapPin } from 'lucide-react';
+import { Briefcase, CheckCircle, MapPin } from 'lucide-react';
 
-// GlowingIcon is not used here, can be removed if not needed elsewhere in this file.
-// const GlowingIcon = ({ icon: Icon, className }: { icon: React.ElementType, className?: string }) => (
-//   <Icon className={`w-6 h-6 text-glow-accent ${className}`} />
-// );
 
 export function EventSchedule() {
-  // Default to the first day in the schedule
-  const defaultTabValue = eventSchedule.days.length > 0 
-    ? `day-${eventSchedule.days[0].day.replace(/\s+/g, '-').toLowerCase()}` 
+  const defaultTabValue = typedEventSchedule.days.length > 0 
+    ? `day-${typedEventSchedule.days[0].dayName.replace(/\s+/g, '-').toLowerCase()}` 
     : 'day-1';
 
   return (
@@ -39,7 +33,7 @@ export function EventSchedule() {
           </CardHeader>
           <CardContent>
             <ul className="space-y-3 list-inside">
-              {eventSchedule.objectives.map((obj, index) => (
+              {typedEventSchedule.objectives.map((obj, index) => (
                 <li key={index} className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0" />
                   <span className="text-foreground/90">{obj}</span>
@@ -50,30 +44,30 @@ export function EventSchedule() {
         </Card>
         
         <div className="mb-8 flex items-center justify-center text-lg text-muted-foreground">
-          <MapPin className="w-6 h-6 mr-2 text-primary" />
-          <span>{eventSchedule.generalInfo.location}</span>
+          <typedEventSchedule.generalInfo.mainIcon className="w-6 h-6 mr-2 text-primary" />
+          <span>{typedEventSchedule.generalInfo.location}</span>
         </div>
 
 
         <Tabs defaultValue={defaultTabValue} className="w-full">
-          <ScrollArea className="pb-2.5">
-            <TabsList className={`grid w-full grid-cols-1 sm:grid-cols-${eventSchedule.days.length > 1 ? eventSchedule.days.length : 1} gap-2 mb-8`}>
-              {eventSchedule.days.map((dayData) => (
-                <TabsTrigger 
-                  key={dayData.day} 
-                  value={`day-${dayData.day.replace(/\s+/g, '-').toLowerCase()}`}
-                  className="py-3 text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg group" // Added group for hover states on icon
-                >
-                  <dayData.icon className={`w-5 h-5 mr-2 ${dayData.themeColor} group-data-[state=active]:text-primary-foreground transition-colors`} />
-                  {dayData.day} - <span className="ml-1 text-xs opacity-80">{dayData.date}</span>
-                </TabsTrigger>
-              ))}
-            </TabsList>
-            <ScrollBar orientation="horizontal" />
-          </ScrollArea>
+          <TabsList className="flex flex-wrap justify-center gap-2 mb-8 bg-transparent p-0">
+            {typedEventSchedule.days.map((dayData) => (
+              <TabsTrigger 
+                key={dayData.dayName} 
+                value={`day-${dayData.dayName.replace(/\s+/g, '-').toLowerCase()}`}
+                className="py-3 px-4 text-sm sm:text-base data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-lg group border border-border hover:bg-muted/50 data-[state=active]:border-primary rounded-md"
+              >
+                <dayData.icon className={`w-5 h-5 mr-2 ${dayData.themeColor} group-data-[state=active]:text-primary-foreground transition-colors`} />
+                {dayData.dayName} - <span className="ml-1 text-xs opacity-80">{dayData.date}</span>
+              </TabsTrigger>
+            ))}
+          </TabsList>
 
-          {eventSchedule.days.map((dayData, dayIndex) => (
-            <TabsContent key={dayData.day} value={`day-${dayData.day.replace(/\s+/g, '-').toLowerCase()}`}>
+          {typedEventSchedule.days.map((dayData, dayIndex) => (
+            <TabsContent key={dayData.dayName} value={`day-${dayData.dayName.replace(/\s+/g, '-').toLowerCase()}`}>
+              <h3 className={`text-2xl font-headline mb-6 text-center ${dayData.themeColor}`}>
+                {dayData.dayTheme}
+              </h3>
               <Accordion type="single" collapsible className="w-full" defaultValue={`item-${dayIndex}-0`}>
                 {dayData.activities.map((activity, activityIndex) => (
                   <AccordionItem key={activityIndex} value={`item-${dayIndex}-${activityIndex}`} className="border-b border-border/50">
@@ -102,4 +96,3 @@ export function EventSchedule() {
     </section>
   );
 }
-

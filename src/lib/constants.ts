@@ -23,56 +23,59 @@ export const eventSchedule = {
   ],
   days: [
     {
-      day: "Day 1: Revolutionizing Tomorrow – PROJECT Q",
+      dayName: "Day 1",
+      dayTheme: "Revolutionizing Tomorrow – PROJECT Q",
       date: "June 18, 2025",
       icon: Target,
       themeColor: "text-primary",
       activities: [
-        { time: "09:00 AM - 09:30 AM", title: "Registration", icon: Clipboard, description: "Branded check-in desks, name tags, event guides, sponsor souvenirs. Sponsor booths (e.g., PalmPay) active. Venue: CBAS Car Park to CHMS Car Park." },
+        { time: "09:00 AM - 09:30 AM", title: "Registration", icon: Clipboard, description: "Branded check-in desks, name tags, event guides, sponsor souvenirs. Sponsor booths (e.g., PalmPay) active." },
         { 
           time: "09:30 AM - 11:30 AM", 
           title: "Opening Ceremony", 
           icon: Mic, 
-          description: "Anthems, welcome address (NACOS MTU President), Citation for Keynote Speaker I (VP), Keynote I: Abah Emmanuel, Citation for Keynote Speaker II (VP), Keynote II: Director Of Innovation and Research Nacos National, introduction of exhibitors and pitch judges. Venue: CBAS Car Park to CHMS Car Park.",
+          description: "Anthems, welcome address (NACOS MTU President), Citation for Keynote Speaker I (VP), Keynote I: Abah Emmanuel, Citation for Keynote Speaker II (VP), Keynote II: Director Of Innovation and Research Nacos National, introduction of exhibitors and pitch judges.",
           speaker: "Abah Emmanuel (Keynote I) & Director Of Innovation, Nacos National (Keynote II)"
         },
-        { time: "11:30 AM - 12:00 PM", title: "Innovation Pitch Competition", icon: Lightbulb, description: "5 student teams pitch original ideas (5 mins pitch + 3 mins Q&A). Judges: Faculty, alumni, industry reps. Prize: Best Pitch Award (sponsored). Venue: CBAS Car Park to CHMS Car Park." },
-        { time: "12:00 PM - 01:00 PM", title: "Tech & Startup Exhibitions", icon: AppWindow, description: "10+ booths: Student apps, AI tools, UI/UX, games, hardware. Fintech & blockchain demos. Sponsor/startup booths. Engagement: raffles, app trials, quick games, giveaways. Venue: CBAS Car Park to CHMS Car Park." },
-        { time: "01:00 PM - 01:30 PM", title: "Networking Segment", icon: Users, description: "Designated networking zone. Guided speed networking, alumni meetups. Venue: CBAS Car Park to CHMS Car Park." },
-        { time: "01:30 PM - 02:00 PM", title: "Closing & Group Photos", icon: Camera, description: "Vote of thanks, award recognition. Group photos, final remarks. Venue: CBAS Car Park to CHMS Car Park." },
+        { time: "11:30 AM - 12:00 PM", title: "Innovation Pitch Competition", icon: Lightbulb, description: "5 student teams pitch original ideas (5 mins pitch + 3 mins Q&A). Judges: Faculty, alumni, industry reps. Prize: Best Pitch Award (sponsored)." },
+        { time: "12:00 PM - 01:00 PM", title: "Tech & Startup Exhibitions", icon: AppWindow, description: "10+ booths: Student apps, AI tools, UI/UX, games, hardware. Fintech & blockchain demos. Sponsor/startup booths. Engagement: raffles, app trials, quick games, giveaways." },
+        { time: "01:00 PM - 01:30 PM", title: "Networking Segment", icon: Users, description: "Designated networking zone. Guided speed networking, alumni meetups." },
+        { time: "01:30 PM - 02:00 PM", title: "Closing & Group Photos", icon: Camera, description: "Vote of thanks, award recognition. Group photos, final remarks." },
       ],
     },
     {
-      day: "Day 2: Tech Meet & Awards - From Campus to Career",
+      dayName: "Day 2",
+      dayTheme: "Tech Meet & Awards - From Campus to Career",
       date: "June 19, 2025",
-      icon: Award, // Changed icon to Award
+      icon: Award,
       themeColor: "text-accent",
       activities: [
         { 
           time: "10:00 AM - 12:00 PM", 
           title: "Alumni & Professional Panel: Navigating the Tech Industry", 
           icon: Presentation, 
-          description: "Topic: “Navigating the Tech Industry as a Young Nigerian Graduate”. Moderator-led Q&A with Alumni + tech professionals, real-world tips. Venue: CBAS BIG LT." 
+          description: "Topic: “Navigating the Tech Industry as a Young Nigerian Graduate”. Moderator-led Q&A with Alumni + tech professionals, real-world tips." 
         },
         { 
           time: "01:00 PM - 03:00 PM", 
           title: "Career & Mentorship Hub", 
           icon: Briefcase, 
-          description: "Sessions on: CV writing & LinkedIn optimization, Interview techniques, job search strategies, Freelancing, internships, remote jobs, Personal branding & online visibility. Venue: CBAS BIG LT." 
+          description: "Sessions on: CV writing & LinkedIn optimization, Interview techniques, job search strategies, Freelancing, internships, remote jobs, Personal branding & online visibility." 
         },
         { 
           time: "03:30 PM - 05:00 PM", 
           title: "Awards & Recognition Ceremony", 
           icon: Trophy, 
-          description: "Celebrating excellence: Best Innovator of the Year, Tech Influencer Award, Best in Academics (Computer Science & Mathematics), Best Project (from Day 1 Pitch), Most Supportive Lecturer, Industry Partner Appreciation (Aquatic Waters), Alumni Contribution Award. Certificate & Souvenir Presentations. Venue: CBAS BIG LT." 
+          description: "Celebrating excellence: Best Innovator of the Year, Tech Influencer Award, Best in Academics (Computer Science & Mathematics), Best Project (from Day 1 Pitch), Most Supportive Lecturer, Industry Partner Appreciation (Aquatic Waters), Alumni Contribution Award. Certificate & Souvenir Presentations." 
         },
       ],
     },
     {
-      day: "Day 3: Future Forward & Workshops", // Updated title to be more specific
+      dayName: "Day 3",
+      dayTheme: "Future Forward & Workshops",
       date: "June 20, 2025",
       icon: Rocket, 
-      themeColor: "text-secondary", // Using a distinct color, e.g., a lighter purple or other theme color
+      themeColor: "text-secondary",
       activities: [
         { time: "09:00 AM - 11:00 AM", title: "Advanced Workshop: AI & Machine Learning", icon: BrainCircuit, description: "Deep dive into AI concepts and practical applications. Led by industry experts. Venue: CBAS BIG LT / Relevant Lab." },
         { time: "11:30 AM - 01:00 PM", title: "Advanced Workshop: Cloud & DevOps", icon: Cpu, description: "Exploring cloud infrastructure, CI/CD pipelines, and scalable solutions. Venue: CBAS BIG LT / Relevant Lab." },
@@ -83,7 +86,7 @@ export const eventSchedule = {
     },
   ],
   generalInfo: {
-    location: "MTU Campus: CBAS Car Park to CHMS Car Park & CBAS BIG LT", // Updated to reflect multiple venues
+    location: "MTU Campus: CBAS Car Park, CHMS Car Park & CBAS BIG LT",
     mainIcon: MapPin,
   }
 };
@@ -98,7 +101,8 @@ interface Activity {
 }
 
 interface DaySchedule {
-  day: string;
+  dayName: string;
+  dayTheme: string;
   date: string;
   icon: React.ElementType;
   themeColor: string;
@@ -114,4 +118,3 @@ interface EventScheduleData {
   };
 }
 export const typedEventSchedule: EventScheduleData = eventSchedule;
-
