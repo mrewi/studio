@@ -22,7 +22,7 @@ export const eventSchedule = {
   days: [
     {
       day: "Day 1: Innovation Ignition",
-      date: "October 26, 2024",
+      date: "October 26, 2025",
       icon: Zap,
       themeColor: "text-primary",
       activities: [
@@ -37,7 +37,7 @@ export const eventSchedule = {
     },
     {
       day: "Day 2: Code & Creation",
-      date: "October 27, 2024",
+      date: "October 27, 2025",
       icon: Cpu,
       themeColor: "text-accent",
       activities: [

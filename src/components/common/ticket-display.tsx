@@ -23,7 +23,7 @@ export function TicketDisplay({ ticketData }: TicketDisplayProps) {
   const qrValue = JSON.stringify({
     ticketId: ticketData.ticketId,
     name: ticketData.name,
-    event: "MTU NACOS Tech Fair 2024",
+    event: "MTU NACOS Tech Fair 2025",
   });
 
   const handleDownload = async () => {
@@ -97,7 +97,7 @@ export function TicketDisplay({ ticketData }: TicketDisplayProps) {
           </p>
         </CardContent>
         <CardFooter className="bg-muted/50 p-4 flex items-center justify-center">
-          <p className="text-xs text-muted-foreground">#MTUNacosTechFair2024</p>
+          <p className="text-xs text-muted-foreground">#MTUNacosTechFair2025</p>
         </CardFooter>
       </Card>
 

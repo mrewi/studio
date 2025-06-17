@@ -32,7 +32,7 @@ export function HomeSection() {
         <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight">
             <span className="block text-primary">MTU NACOS</span>
-            <span className="block text-accent">Tech Fair 2024</span>
+            <span className="block text-accent">Tech Fair 2025</span>
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl md:text-2xl text-foreground/80">
             Experience the future of technology. Discover innovation, connect with experts, and ignite your passion.

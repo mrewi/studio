@@ -63,7 +63,7 @@ export function Footer() {
           <h3 className="font-headline text-lg font-semibold mb-4 text-primary">Event Details</h3>
           <div className="space-y-3">
             <GlowingIcon icon={LinkIcon} href="https://mtu.nacostechfair.ng" label="mtu.nacostechfair.ng" />
-            <p className="font-bold text-accent text-lg animate-glow">#MTUNacosTechFair2024</p>
+            <p className="font-bold text-accent text-lg animate-glow">#MTUNacosTechFair2025</p>
           </div>
         </div>
       </div>
