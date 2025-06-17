@@ -2,16 +2,16 @@
 import { Users, Mic, Cpu, Target, Award, Coffee, Rocket, Code, CalendarDays, Clock, MapPin, BrainCircuit, Presentation, Clipboard, Lightbulb, AppWindow, Camera, Trophy, PartyPopper, Briefcase, FileText, Search, Laptop, Gamepad2, Smartphone, Brain, Dice5, Keyboard, Mic2 } from 'lucide-react';
 
 export const galleryImages = [
-  { id: 1, src: "https://placehold.co/600x400.png", alt: "Tech Fair Opening Ceremony", hint: "conference opening" },
-  { id: 2, src: "https://placehold.co/600x400.png", alt: "Students in Workshop", hint: "student workshop" },
-  { id: 3, src: "https://placehold.co/600x400.png", alt: "Keynote Speaker", hint: "speaker stage" },
-  { id: 4, src: "https://placehold.co/600x400.png", alt: "Networking Session", hint: "people networking" },
-  { id: 5, src: "https://placehold.co/600x400.png", alt: "Project Showcase", hint: "tech project" },
-  { id: 6, src: "https://placehold.co/600x400.png", alt: "Award Ceremony", hint: "award presentation" },
-  { id: 7, src: "https://placehold.co/600x400.png", alt: "Group Photo", hint: "team photo" },
-  { id: 8, src: "https://placehold.co/600x400.png", alt: "Interactive Demo", hint: "virtual reality" },
+  { id: 1, src: "/lib/image/nacos1.jpg", alt: "Tech Fair Opening Ceremony", hint: "conference opening" },
+  { id: 2, src: "/lib/image/nacos2.jpg", alt: "Students in a workshop", hint: "student workshop" },
+  { id: 3, src: "/lib/image/nacos3.jpg", alt: "Speaker presenting on stage", hint: "speaker stage" },
+  { id: 4, src: "/lib/image/nacos4.jpg", alt: "Attendees networking", hint: "people networking" },
+  { id: 5, src: "/lib/image/nacos5.jpg", alt: "Close-up of a tech project", hint: "tech project" },
+  { id: 6, src: "/lib/image/nacos6.jpg", alt: "Award presentation moment", hint: "award presentation" },
+  { id: 7, src: "/lib/image/nacos7.jpg", alt: "Group photo of participants", hint: "team photo" },
+  { id: 8, src: "/lib/image/nacos8.jpg", alt: "Participant using VR headset", hint: "virtual reality" },
+  { id: 9, src: "/lib/image/nacos9.jpg", alt: "Networking during a break", hint: "networking break" },
 ];
-
 export const eventSchedule = {
   objectives: [
     "To showcase technological innovations from MTU students and local tech communities.",
@@ -27,8 +27,8 @@ export const eventSchedule = {
       dayName: "Day 1",
       dayTheme: "Revolutionizing Tomorrow – PROJECT Q",
       date: "June 18, 2025",
-      icon: Target, // Represents focus and innovation
-      themeColor: "text-primary", // MTU Green
+      icon: Target, 
+      themeColor: "text-primary",
       activities: [
         { time: "09:00 AM - 09:30 AM", title: "Registration", icon: Clipboard, description: "Branded check-in desks, name tags, event guides, sponsor souvenirs. Sponsor booths (e.g., PalmPay) active." },
         {
@@ -51,28 +51,28 @@ export const eventSchedule = {
       dayName: "Day 2",
       dayTheme: "Tech Meet & Awards - From Campus to Career",
       date: "June 19, 2025",
-      icon: Award, // Represents achievements and recognition
-      themeColor: "text-accent", // NACOS Purple
+      icon: Award, 
+      themeColor: "text-accent", 
       activities: [
         {
-          time: "10:00 AM - 12:00 PM", // Example time
+          time: "10:00 AM - 12:00 PM", 
           title: "Alumni & Professional Panel: Navigating the Tech Industry",
           icon: Presentation,
           description: "Topic: “Navigating the Tech Industry as a Young Nigerian Graduate”. Moderator-led Q&A with Alumni + tech professionals, real-world tips.",
-          speakers: [ // Example, replace with actual panelists
+          speakers: [ 
             { name: "Successful Alumnus 1", role: "Software Engineer @ Big Tech" },
             { name: "Industry Professional 1", role: "HR Manager @ Tech Startup" },
             { name: "MTU Faculty Member", role: "Computer Science Dept." }
           ]
         },
         {
-          time: "01:00 PM - 03:00 PM", // Example time
+          time: "01:00 PM - 03:00 PM", 
           title: "Career & Mentorship Hub",
           icon: Briefcase,
           description: "Breakout sessions on: CV writing & LinkedIn optimization, Interview techniques & job search strategies, Freelancing, internships, & remote jobs, Personal branding & online visibility."
         },
         {
-          time: "03:30 PM - 05:00 PM", // Example time
+          time: "03:30 PM - 05:00 PM",
           title: "Awards & Recognition Ceremony",
           icon: Trophy,
           description: "Celebrating excellence: Best Innovator of the Year, Tech Influencer Award, Best in Academics (Computer Science & Mathematics), Best Project (from Day 1 Pitch), Most Supportive Lecturer, Industry Partner Appreciation (Aquatic Waters), Alumni Contribution Award. Certificate & Souvenir Presentations."
@@ -83,8 +83,8 @@ export const eventSchedule = {
       dayName: "Day 3",
       dayTheme: "Unplug to Connect – Play, Compete, Bond",
       date: "June 20, 2025",
-      icon: Gamepad2, // Represents games and social interaction
-      themeColor: "text-secondary", // Lighter NACOS Purple
+      icon: Gamepad2, 
+      themeColor: "text-secondary", 
       activities: [
         { time: "Full Day", title: "Inter-level Games & Tournaments", icon: Gamepad2, description: "Console: FIFA, PES, Mortal Kombat. Mobile: PUBG, Call of Duty Mobile, Chess.com." },
         { time: "Full Day", title: "Brain Battles & Tech Trivia", icon: Brain, description: "Kahoot quizzes (tech & pop culture), “Who Wants to Be a Developer?” live quiz, Code puzzles, logic games." },
@@ -97,7 +97,7 @@ export const eventSchedule = {
     },
   ],
   generalInfo: {
-    location: "MTU Campus: CBAS Car Park, CHMS Car Park, CBAS BIG LT, University Pavilion & Outdoor Game Zones",
+    location: "MTU Campus: CBAS BIG LT, CBAS Car Park, CHMS Car Park, University Pavilion & Outdoor Game Zones",
     mainIcon: MapPin,
   }
 };
@@ -107,8 +107,8 @@ interface Activity {
   title: string;
   icon: React.ElementType;
   description: string;
-  speaker?: string; // Optional single speaker
-  speakers?: Array<{name: string, role?: string}>; // Optional list of speakers/panelists
+  speaker?: string; 
+  speakers?: Array<{name: string, role?: string}>; 
 }
 
 interface DaySchedule {
