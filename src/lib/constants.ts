@@ -1,5 +1,5 @@
 
-import { Users, Mic, Cpu, Target, Award, Coffee, Rocket, Code, CalendarDays, Clock, MapPin, BrainCircuit, Presentation, Clipboard, Lightbulb, AppWindow, Camera, Trophy, PartyPopper, Briefcase, FileText, Search, Laptop } from 'lucide-react';
+import { Users, Mic, Cpu, Target, Award, Coffee, Rocket, Code, CalendarDays, Clock, MapPin, BrainCircuit, Presentation, Clipboard, Lightbulb, AppWindow, Camera, Trophy, PartyPopper, Briefcase, FileText, Search, Laptop, Gamepad2, Smartphone, Brain, Dice5, Keyboard, Mic2 } from 'lucide-react';
 
 export const galleryImages = [
   { id: 1, src: "https://placehold.co/600x400.png", alt: "Tech Fair Opening Ceremony", hint: "conference opening" },
@@ -19,7 +19,8 @@ export const eventSchedule = {
     "To inspire students towards careers in technology and entrepreneurship.",
     "To foster collaboration between academia and industry in the tech sector.",
     "To give students real-world exposure and connect them with industry professionals.",
-    "To equip students for post-campus life with mentorship and career guidance."
+    "To equip students for post-campus life with mentorship and career guidance.",
+    "Build community through friendly competition and social interaction."
   ],
   days: [
     {
@@ -30,11 +31,11 @@ export const eventSchedule = {
       themeColor: "text-primary",
       activities: [
         { time: "09:00 AM - 09:30 AM", title: "Registration", icon: Clipboard, description: "Branded check-in desks, name tags, event guides, sponsor souvenirs. Sponsor booths (e.g., PalmPay) active." },
-        { 
-          time: "09:30 AM - 11:30 AM", 
-          title: "Opening Ceremony", 
-          icon: Mic, 
-          description: "Anthems, welcome address (NACOS MTU President), Citation for Keynote Speaker I (VP), Keynote I: Abah Emmanuel, Citation for Keynote Speaker II (VP), Keynote II: Director Of Innovation and Research Nacos National, introduction of exhibitors and pitch judges.",
+        {
+          time: "09:30 AM - 11:30 AM",
+          title: "Opening Ceremony",
+          icon: Mic,
+          description: "Anthems, welcome address (NACOS MTU President), Citation for Keynote Speaker I (VP), Keynote I: Abah Emmanuel (Senior Software Developer, TradeGrid / Tech Lead, Kitaniz), Citation for Keynote Speaker II (VP), Keynote II: Director Of Innovation and Research Nacos National, introduction of exhibitors and pitch judges.",
           speaker: "Abah Emmanuel (Keynote I) & Director Of Innovation, Nacos National (Keynote II)"
         },
         { time: "11:30 AM - 12:00 PM", title: "Innovation Pitch Competition", icon: Lightbulb, description: "5 student teams pitch original ideas (5 mins pitch + 3 mins Q&A). Judges: Faculty, alumni, industry reps. Prize: Best Pitch Award (sponsored)." },
@@ -50,43 +51,45 @@ export const eventSchedule = {
       icon: Award,
       themeColor: "text-accent",
       activities: [
-        { 
-          time: "10:00 AM - 12:00 PM", 
-          title: "Alumni & Professional Panel: Navigating the Tech Industry", 
-          icon: Presentation, 
-          description: "Topic: “Navigating the Tech Industry as a Young Nigerian Graduate”. Moderator-led Q&A with Alumni + tech professionals, real-world tips." 
+        {
+          time: "10:00 AM - 12:00 PM",
+          title: "Alumni & Professional Panel: Navigating the Tech Industry",
+          icon: Presentation,
+          description: "Topic: “Navigating the Tech Industry as a Young Nigerian Graduate”. Moderator-led Q&A with Alumni + tech professionals, real-world tips."
         },
-        { 
-          time: "01:00 PM - 03:00 PM", 
-          title: "Career & Mentorship Hub", 
-          icon: Briefcase, 
-          description: "Sessions on: CV writing & LinkedIn optimization, Interview techniques, job search strategies, Freelancing, internships, remote jobs, Personal branding & online visibility." 
+        {
+          time: "01:00 PM - 03:00 PM",
+          title: "Career & Mentorship Hub",
+          icon: Briefcase,
+          description: "Sessions on: CV writing & LinkedIn optimization, Interview techniques, job search strategies, Freelancing, internships, remote jobs, Personal branding & online visibility."
         },
-        { 
-          time: "03:30 PM - 05:00 PM", 
-          title: "Awards & Recognition Ceremony", 
-          icon: Trophy, 
-          description: "Celebrating excellence: Best Innovator of the Year, Tech Influencer Award, Best in Academics (Computer Science & Mathematics), Best Project (from Day 1 Pitch), Most Supportive Lecturer, Industry Partner Appreciation (Aquatic Waters), Alumni Contribution Award. Certificate & Souvenir Presentations." 
+        {
+          time: "03:30 PM - 05:00 PM",
+          title: "Awards & Recognition Ceremony",
+          icon: Trophy,
+          description: "Celebrating excellence: Best Innovator of the Year, Tech Influencer Award, Best in Academics (Computer Science & Mathematics), Best Project (from Day 1 Pitch), Most Supportive Lecturer, Industry Partner Appreciation (Aquatic Waters), Alumni Contribution Award. Certificate & Souvenir Presentations."
         },
       ],
     },
     {
       dayName: "Day 3",
-      dayTheme: "Future Forward & Workshops",
+      dayTheme: "Unplug to Connect – Play, Compete, Bond",
       date: "June 20, 2025",
-      icon: Rocket, 
+      icon: Gamepad2,
       themeColor: "text-secondary",
       activities: [
-        { time: "09:00 AM - 11:00 AM", title: "Advanced Workshop: AI & Machine Learning", icon: BrainCircuit, description: "Deep dive into AI concepts and practical applications. Led by industry experts. Venue: CBAS BIG LT / Relevant Lab." },
-        { time: "11:30 AM - 01:00 PM", title: "Advanced Workshop: Cloud & DevOps", icon: Cpu, description: "Exploring cloud infrastructure, CI/CD pipelines, and scalable solutions. Venue: CBAS BIG LT / Relevant Lab." },
-        { time: "01:00 PM - 02:00 PM", title: "Lunch & Final Networking", icon: Coffee, description: "Last chance for structured networking over lunch." },
-        { time: "02:00 PM - 03:30 PM", title: "Closing Keynote & Vision for the Future", icon: Mic, speaker: "Distinguished Tech Leader", description: "Inspiring talk on future tech trends and opportunities." },
-        { time: "03:30 PM - 04:00 PM", title: "Vote of Thanks & Event End", icon: PartyPopper, description: "Concluding the tech fair with acknowledgements and a look ahead." },
+        { time: "Full Day", title: "Inter-level Games & Tournaments", icon: Gamepad2, description: "Console: FIFA, PES, Mortal Kombat. Mobile: PUBG, Call of Duty Mobile, Chess.com." },
+        { time: "Full Day", title: "Brain Battles & Tech Trivia", icon: Brain, description: "Kahoot quizzes (tech & pop culture), “Who Wants to Be a Developer?” live quiz, Code puzzles, logic games." },
+        { time: "Full Day", title: "Board Games & Chill Zone", icon: Dice5, description: "Chess, Monopoly, Uno, Whot, Scrabble. Music-powered chill space with NACOS playlist." },
+        { time: "Scheduled Slots", title: "Typing & Speed Coding Challenges", icon: Keyboard, description: "Typing contest (10FastFingers), Timed mini-coding tasks (Python, HTML/CSS, JavaScript)." },
+        { time: "Full Day", title: "Photo Booths & Social Wall", icon: Camera, description: "Branded backdrops + instant Polaroid-style prints. Live hashtag wall (#NACOSWeek2025)." },
+        { time: "Afternoon", title: "Open Mic & Freestyle Corner (Optional)", icon: Mic2, description: "Spoken word, rap freestyle, light debates. Refreshments available throughout." },
+        { time: "Throughout", title: "Refreshments", icon: Coffee, description: "Refreshments available throughout the day." }
       ],
     },
   ],
   generalInfo: {
-    location: "MTU Campus: CBAS Car Park, CHMS Car Park & CBAS BIG LT",
+    location: "MTU Campus: Various locations including CBAS Car Park, CHMS Car Park, CBAS BIG LT, University Pavilion & Outdoor Game Zones",
     mainIcon: MapPin,
   }
 };
